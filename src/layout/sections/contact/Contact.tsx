@@ -6,7 +6,7 @@ import photo from "../../../assets/images/contact.jpg";
 export const Contact = () => {
   return (
     <StyledContact>
-      <SectionTitle>Contact my assistant</SectionTitle>
+      <SectionTitle>Contact</SectionTitle>
 
       <StyledForm>
         <Field placeholder="Name"></Field>
@@ -15,7 +15,7 @@ export const Contact = () => {
         <Button type={"submit"}>Send message</Button>
        
       </StyledForm>
-      <PhotoContact src={photo} alt="Assistant" />
+    
     </StyledContact>
   );
 };
@@ -38,8 +38,3 @@ margin: 0 auto;
 
 const Field = styled.input`
 `
-const PhotoContact = styled.img`
-  width: 350px;
-  height: 430px;
-  object-fit: cover;
-`;

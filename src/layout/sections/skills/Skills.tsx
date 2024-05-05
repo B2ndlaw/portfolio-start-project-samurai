@@ -10,44 +10,30 @@ export const Skills = () => {
       <SectionTitle>My Skills</SectionTitle>
       <FlexWrapper wrap="wrap" justify="space-between">
         <Skill
-          iconId="aquaman"
-          width="50px"
-          height="50px"
-          fill="white"
-          viewBox="0 0 512 512"
-          title="Aquaman"
-          text="Conquering the seven seas"
+          iconId="html"
+          title="HTML"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
         />
         <Skill
-          iconId="beer"
-          height="50px"
-          width="50px"
-          viewBox="0 0 512 512"
-          title="Beer"
-          text="Guinness enthusiast"
+          iconId="css"
+          title="CSS"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
         />
         <Skill
-          iconId="axe"
-          width="50px"
-          height="50px"
-          fill="white"
-          viewBox="0 0 512 512"
-          title="Axe throwing"
-          text="Drop axe"
+          iconId="react"
+          title="REACT"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
         />
         <Skill
-          iconId="khalisi"
-          width="50px"
-          height="50px"
-          fill="white"
-          viewBox="0 0 24 24"
-          title="Khalisi husband"
-          text="Wuf"
+          iconId="typescript"
+          title="TYPESCRIPT"
+          text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim"
         />
-        <Skill iconId="bouldering" width="50px"
-  height="50px"
-  viewBox="0 0 24 24" title="Bouldering" text="Guinness's ambassador" />
-        <Skill iconId="gym" viewBox="0 0 70.529 70.529" title="Gym" text="Drop axe" />
+        <Skill iconId="styledcomponents" 
+        title="STYLED COMPONENTS" 
+        text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim" 
+        />
+        <Skill iconId="figma" title="WEB DESIGN" text="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim" />
       </FlexWrapper>
     </StyledSkills>
   );

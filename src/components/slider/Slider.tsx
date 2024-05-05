@@ -8,13 +8,15 @@ export const Slider = () => {
    <StyledSlider>
     <FlexWrapper>
 <Slide>
+  <img src="https://i.pinimg.com/736x/fa/8b/a4/fa8ba4cbad8efb654610b5ec1348c0aa.jpg" width={"100px"}></img>
+<Name>
+  Svetlana Dyablo 
+</Name>
 <Text>
-Lorem ipsum
+Guru HTML CSS technologies. Fight style - Styled Components
 </Text>
 
-<Name>
-  Jack Black  
-</Name>
+
 </Slide>
 </FlexWrapper>
 <Pagination>

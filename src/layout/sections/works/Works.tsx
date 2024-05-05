@@ -5,7 +5,7 @@ import { SectionTitle } from "../../../components/SectionTitle";
 import { Menu } from "../../../components/menu/Menu";
 import { Work } from "./work/Work";
 
-const worksItems = ["Aquaman", "Guinness", "Jason Momoa", "Sport"];
+const worksItems = ["ALL", "LANDING PAGE", "REACT", "SPA"];
 export const Works = () => {
   return (
     <StyledWorks>
@@ -15,13 +15,13 @@ export const Works = () => {
         <Work
           title="Jason Momoa - 2% Irish"
           description="Lorem ipsum"
-          src="https://www.youtube.com/embed/Xt05ZN-C26k?si=Dhx4wjT7o-SCi8I0"
+          src="https://proprikol.ru/wp-content/uploads/2020/12/salyut-krasivye-kartinki-18-1.jpg"
           link="#"
         />
         <Work
           title="Aquaman like Guinness"
           description="Lorem ipsum"
-          src="https://www.youtube.com/embed/ZmH5bDMyqjE?si=4d1p-CVGlkGRKZ09&amp;start=3"
+          src="https://proprikol.ru/wp-content/uploads/2020/12/salyut-krasivye-kartinki-18-1.jpg"
           link="#"
         />
       </FlexWrapper>
