@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import iconsSprite from "../../assets/images/icons-sprite.svg";
+import iconsSprite from "../../../assets/images/icons-sprite.svg"
 
-type IconPropsType = {
+type SkillsIconPropsType = {
   iconId: string;
   width?: string;
   height?: string;
@@ -10,10 +10,10 @@ type IconPropsType = {
   fill?: string;
 };
 
-export const Icon = (props: IconPropsType) => {
+export const SkillsIcon = (props: SkillsIconPropsType) => {
   return (
     <StyledIcon
-      fill={props.fill || "pink"}
+      fill={props.fill || "black"}
       width={props.width || "50"}
       height={props.height || "50"}
       viewBox={props.viewBox || "0 0 50 50"}
@@ -24,9 +24,6 @@ export const Icon = (props: IconPropsType) => {
 };
 
 const StyledIcon = styled.svg`
-  &:hover {
-    transform: translateY(-5px);
-    transition: transform 0.1s linear;
-    //transform: scale(1.1);
-  }
+  
+  
 `;

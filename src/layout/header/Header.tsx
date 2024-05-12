@@ -1,29 +1,31 @@
 import React from "react";
 import styled from "styled-components";
 import { Logo } from "../../components/logo/Logo";
-import { Menu } from "../../components/menu/Menu";
+import { Container } from "../../components/Container";
+import { theme } from "../../styles/Theme";
+import { FlexWrapper } from "../../components/FlexWrapper";
+import { KatanaButton } from "../../components/KatanaButton";
 
-const items = ["Home", "Skills", "Works", "Sensei", "Contact"]
+
 
 export const Header = () => {
   return (
-    <SlyledHeader>
-      <Logo />
-      <Menu menuItems={items}/>
-    </SlyledHeader>
+    <StyledHeader>
+      <Container>
+        <FlexWrapper justify="space-between" align="center">
+          <Logo />
+          <KatanaButton/>
+        </FlexWrapper>
+      </Container>
+    </StyledHeader>
   );
 };
 
-
-const SlyledHeader = styled.header`
-  background-color: #ffc0cb63;
-  display: flex;
-  justify-content:space-between;
-  align-items: center;
+const StyledHeader = styled.header`
+  background-color: ${theme.colors.secondaryBg};
   position: fixed;
-  width: 100%;
- 
-  font-size: 23px;
-  padding: 5px 100px;
-  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
 `;

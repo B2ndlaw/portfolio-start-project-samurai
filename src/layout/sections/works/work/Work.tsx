@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import { Link } from "../../../../components/Link";
+import { theme } from "../../../../styles/Theme";
+import { Button } from "../../../../components/Button";
+
 
 type WorkPropsType = {
   title: string;
@@ -12,38 +16,79 @@ type WorkPropsType = {
 export const Work = (props: WorkPropsType) => {
   return (
     <StyledWork>
-      <StyledIframe src={props.src}></StyledIframe>
+      <ImageWrapper>
+      <Image src={props.src}/>
+      <Button>view project</Button>
+      </ImageWrapper>
+      <Description>
       <Title>{props.title}</Title>
-      <Description>{props.description}</Description>
-      <Link href="#">Like</Link>
-      <Link href="#">Unlike</Link>
+      <Text>{props.description}</Text>
+      <Link href={"#"}>Like</Link>
+      <Link href={"#"}>Unlike</Link>
+      </Description>
     </StyledWork>
   );
 };
 
 const StyledWork = styled.div`
-  background-color: #ffffff1a;
+  background-color: ${theme.colors.secondaryBg};
   max-width: 540px;
   width: 100%;
- 
+
+  ${Link} {
+   padding: 10px 0;
+   &+${Link} {
+    margin-left: 20px;
+   }
+  }
 `;
-const StyledIframe = styled.iframe`
-width: 100%;
-height: 250px;
-object-fit:cover;
-border: none;
+const ImageWrapper = styled.div`
+  position: relative;
+&:hover{
+ 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+  }
+  ${Button}{
+  opacity: 1;
+
+
+}
+}
+
+${Button}{
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%);
+
 
   
-`;
-const Title = styled.h3`
-  color: white;
-`;
-const Description = styled.p`
-  color: white;
+}
+`
+const Image = styled.img`
+
+width: 100%;
+object-fit:cover;
 `;
 
-const Link = styled.a`
-  color: white;
-  text-decoration: none;
-  margin-right: 10px;
+const Description = styled.div`
+padding: 25px 20px;
+`
+
+const Title = styled.h3`
+  
 `;
+const Text = styled.p`
+  margin: 14px 0 10px;
+`;
+
+
