@@ -11,7 +11,7 @@ export const Slider = () => {
       <FlexWrapper direction="column" align="center">
         <Slide>
           <img
-            src="https://i.pinimg.com/736x/fa/8b/a4/fa8ba4cbad8efb654610b5ec1348c0aa.jpg"
+            src="https://sun9-27.userapi.com/impg/HfzvGF-bKhvkr5YQf5j8mfSnUw14MJZJ3E6Bcg/D3qSY4NBVSQ.jpg?size=403x604&quality=96&sign=ca1c7a113b6aed42824efb1afbd30186&c_uniq_tag=PmIIH-SAU599IaOozNbQYFh15htmYRcP_TCqyiUwyWk&type=album"
             alt="photo" width={"200px"}
           ></img>
           <Name>Svetlana Dyablo</Name>
@@ -42,6 +42,10 @@ const StyledSlider = styled.div`
 
 const Slide = styled.div`
   text-align: center;
+
+  img{
+    border-radius: 5px;
+  }
 `;
 
 const Text = styled.p`
@@ -55,8 +59,8 @@ padding: 10px;
 `;
 
 const NickName = styled.h2`
-color: #fcc978;
-font-weight: 400;
+color: ${theme.colors.accent};
+font-weight: 600;
 font-size: 18px;
 
   

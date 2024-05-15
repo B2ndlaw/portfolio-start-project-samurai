@@ -13,6 +13,7 @@ export const Button = styled.button`
   position: relative;
   z-index: 0;
   
+  
 
 
 
@@ -22,7 +23,7 @@ export const Button = styled.button`
       height: 100%;
       width: 100%;
       z-index: -1;
-
+      
     }
   }
 
@@ -37,6 +38,7 @@ export const Button = styled.button`
     bottom: 0;
     transform: translateX(-50%);
     z-index: -1;
+    
     
 
   }

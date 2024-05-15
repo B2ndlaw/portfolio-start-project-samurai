@@ -18,6 +18,7 @@ font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
   -moz-osx-font-smoothing: grayscale;
   color: ${theme.colors.primaryFont};
   line-height: 1.2;
+  min-width:360px;
 
 }
 
@@ -42,6 +43,10 @@ button {
 
 section {
     padding: 50px 0;
+
+    @media ${theme.media.tablet} {
+        padding: 25px 0;   
+    }
 }
 
 section:nth-of-type(odd) {
@@ -68,9 +73,9 @@ h3 {
 
 
  h1{
-    color: #fcc978;
+    color: ${theme.colors.secondaryFont};
   font-weight: 400;
-  font-size: 27px;
+  font-size: 36px;
  }  
 
 `

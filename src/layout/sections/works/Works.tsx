@@ -13,7 +13,7 @@ export const Works = () => {
       <Container>
       <SectionTitle>My Works<br/>作品</SectionTitle>
       <Menu menuItems={worksItems} />
-      <FlexWrapper  justify="space-between" align="flex-start">
+      <FlexWrapper wrap="wrap" justify="space-between" align="flex-start">
         <Work
           title="First Work"
           description="Lorem ipsum"
@@ -33,6 +33,7 @@ export const Works = () => {
 };
 
 const StyledWorks = styled.section`
- 
+ ${FlexWrapper}{
+  gap: 10px;}
 
 `;

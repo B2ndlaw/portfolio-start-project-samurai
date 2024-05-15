@@ -15,40 +15,72 @@ type SkillPropsType = {
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
-      <SkillCardHeader>
-        <SkillName>{props.text}</SkillName>
-        <div>
-          {" "}
-          <SkillsIcon
-            iconId="sakuraIcon"
-            width="25px"
-            viewBox="0 0 511.999 511.999"
-          ></SkillsIcon>
-          <SkillsIcon
-            iconId="sakuraIcon"
-            width="25px"
-            viewBox="0 0 511.999 511.999"
-          ></SkillsIcon>{" "}
-        </div>
-      </SkillCardHeader>
-      <ImageWrapper>
-        <Image src={props.src} />
-        <Button>view more</Button>
-      </ImageWrapper>
-      <Text>{props.description}</Text>
+      <SkillCard>
+        <FrontCard>
+          <SkillCardHeader>
+            <SkillName>{props.text}</SkillName>
+            <div>
+              {" "}
+              <SkillsIcon
+                iconId="sakuraIcon"
+                width="25px"
+                viewBox="0 0 511.999 511.999"
+              ></SkillsIcon>
+              <SkillsIcon
+                iconId="sakuraIcon"
+                width="25px"
+                viewBox="0 0 511.999 511.999"
+              ></SkillsIcon>{" "}
+            </div>
+          </SkillCardHeader>
+          <ImageWrapper>
+            <Image src={props.src} height={"200px"}/>
+            <Button>view more</Button>
+          </ImageWrapper>
+          <Text>{props.description}</Text>
+        </FrontCard>
+        <BackCard>
+        <img src="../../../../assets/images/pngwing.com-43.png"/>
+        </BackCard>
+      </SkillCard>
     </StyledSkill>
   );
 };
 
 export const StyledSkill = styled.div`
-  width: 30%;
-  max-height: 60vh;
-  //border: 4px solid black;
-  box-shadow: 0px 5px 15px 5px rgba(70, 70, 70, 0.5);
+  flex-grow: 1;
+  //border: 2px solid red;
+  
+  
+`;
 
+const SkillCard = styled.div`
+margin: 0 auto 25px;
+  width: 300px;
+  max-height: 60vh;
+  
+
+  box-shadow: 0px 5px 15px 5px rgba(70, 70, 70, 0.5);
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
+  transition: transform 0.1s linear;
+ 
+  &:hover {
+    transform: scale(1.05);
+    
+  }
+  
+  
+`;
+
+const FrontCard = styled.div`
+
+`;
+
+const BackCard = styled.div`
+
+
 `;
 
 const SkillCardHeader = styled.div`
@@ -61,7 +93,7 @@ const SkillCardHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  //border-bottom: 4px solid black;
+ 
 `;
 
 const SkillName = styled.p`
@@ -69,10 +101,12 @@ const SkillName = styled.p`
   font-size: 20px;
   font-weight: 600;
   color: ${theme.colors.primaryFont};
+  opacity: 0.6;
 `;
 
 const ImageWrapper = styled.div`
   position: relative;
+ 
 
   &:hover {
     &::before {
@@ -96,8 +130,9 @@ const ImageWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  height: 100%;
+ 
   width: 100%;
+  
 `;
 
 const Text = styled.p`

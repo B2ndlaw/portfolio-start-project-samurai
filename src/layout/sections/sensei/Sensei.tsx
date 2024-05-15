@@ -23,6 +23,8 @@ export const Sensei = () => {
         </FlexWrapper>
       </Container>
     </StyledSensei>
+
+    
   );
 };
 

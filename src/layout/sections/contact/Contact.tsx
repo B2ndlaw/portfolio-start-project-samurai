@@ -24,11 +24,11 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
- background-image: url(https://cs13.pikabu.ru/post_img/2020/09/15/10/og_og_1600186555243144696.jpg);
+ background: url(https://cs13.pikabu.ru/post_img/2020/09/15/10/og_og_1600186555243144696.jpg) center center no-repeat;
  //background-image: url(https://catherineasquithgallery.com/uploads/posts/2023-01/1674531969_catherineasquithgallery-com-p-sakura-na-korichnevom-fone-165.jpg);
  //background-image: url(https://catherineasquithgallery.com/uploads/posts/2021-02/1614289817_43-p-chernii-yaponskii-fon-57.jpg);
- background-repeat: no-repeat;
- background-size: 100%;
+
+ background-size: auto 100%;
 
  Button{
 

@@ -5,7 +5,7 @@ import { theme } from "../../../styles/Theme";
 export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
     <StyledHeaderMenu>
-      <nav>
+      
         <ul>
           {props.menuItems.map((item, index) => {
             return (
@@ -23,7 +23,7 @@ export const HeaderMenu = (props: { menuItems: Array<string> }) => {
             );
           })}
         </ul>
-      </nav>
+     
     </StyledHeaderMenu>
   );
 };
@@ -33,6 +33,10 @@ const StyledHeaderMenu = styled.nav`
     display: flex;
     gap: 30px;
     justify-content: center;
+  }
+
+  @media ${theme.media.tablet}{
+display: none;
   }
 `;
 
@@ -69,7 +73,7 @@ const ListItem = styled.li`
     content: "";
     display: inline-block;
     height: 3px;
-    background-color: ${theme.colors.secondaryFont};
+    background-color: ${theme.colors.primaryBg};
     position: absolute;
     top: 50%;
     left: -10px;
