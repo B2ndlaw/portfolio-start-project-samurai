@@ -8,7 +8,7 @@ import { Sensei } from './layout/sections/sensei/Sensei';
 import { Contact } from './layout/sections/contact/Contact';
 
 import { Footer } from './layout/footer/Footer';
-import { SkillsMenu } from './layout/sections/skills/SkillsMenu';
+import { Skills } from './layout/sections/skills/Skills';
 
 
 
@@ -18,7 +18,7 @@ function App() {
             
             <Header />
             <Main />
-           <SkillsMenu/>
+           <Skills/>
             <Works />
             <Sensei />
             <Contact />

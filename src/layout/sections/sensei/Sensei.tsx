@@ -1,14 +1,15 @@
 import React from "react";
-import styled from "styled-components";
+
 import { SectionTitle } from "../../../components/SectionTitle";
 import { Slider } from "../../../components/slider/Slider";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../components/Container";
+import { S } from "./Sensei_Styles";
 
 
-export const Sensei = () => {
+export const Sensei: React.FC = () => {
   return (
-    <StyledSensei>
+    <S.Sensei>
       <Container>
       
         <SectionTitle>
@@ -22,13 +23,8 @@ export const Sensei = () => {
           <Slider />
         </FlexWrapper>
       </Container>
-    </StyledSensei>
+    </S.Sensei>
 
     
   );
 };
-
-const StyledSensei = styled.section`
-
-
-`;

@@ -23,6 +23,7 @@ export const Button = styled.button`
       height: 100%;
       width: 100%;
       z-index: -1;
+      border-radius: 5px;
       
     }
   }

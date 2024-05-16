@@ -59,7 +59,7 @@ export const Sakura = () => {
 
 export const StyledSakura = styled.div`
   position: absolute;
-  width: 75%;
+  width: 70%;
   height: 100%;
 
 
