@@ -57,6 +57,7 @@ const BackCard = styled.div`
   /* background-color: ${theme.colors.secondaryBg}; */
   background: url(http://www.psdee.com/content/images/article/20170828/21/01/37_201.jpg) center center no-repeat;
   transform: rotateY(180deg);
+  
 
   //new
 
@@ -113,6 +114,8 @@ const SkillName = styled.p`
 
 const ImageWrapper = styled.div`
   position: relative;
+  padding: 0 10px;
+  
 
   &:hover {
     &::before {
@@ -138,6 +141,7 @@ const ImageWrapper = styled.div`
 
 const Image = styled.img`
   width: 100%;
+
 `;
 
 const Text = styled.p`

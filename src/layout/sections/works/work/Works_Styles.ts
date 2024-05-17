@@ -16,6 +16,7 @@ const Work = styled.div`
   background-color: ${theme.colors.secondaryBg};
   width: 330px;
   flex-grow: 1;
+ 
   
 
   ${Link} {
