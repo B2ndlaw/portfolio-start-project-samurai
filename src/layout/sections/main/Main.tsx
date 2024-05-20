@@ -4,6 +4,8 @@ import { Container } from "../../../components/Container";
 import { Sakura } from "../../../components/Sakura";
 import { S } from "./Main_Styles";
 import { Icon } from "../../../components/icon/Icon";
+import Tilt from "react-parallax-tilt";
+
 
 
 export const Main: React.FC = () => {
@@ -30,10 +32,12 @@ export const Main: React.FC = () => {
           </S.TextBlock>
 
           <S.HeroWrapper>
+            <Tilt>
             <S.Photo src="https://www.clipartmax.com/png/full/103-1031887_the-woman-warrior-samurai-feudalism-child-soldier.png"></S.Photo>
             {/* <MainTitle>
               <p>Level 4</p>
             </MainTitle> */}
+            </Tilt>
           </S.HeroWrapper>
         </FlexWrapper>
       </Container>

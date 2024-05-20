@@ -3,6 +3,7 @@ import { theme } from "../../styles/Theme";
 
 const Slider = styled.div`
   max-width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -26,7 +27,7 @@ font-size: 30px;
 padding: 10px;
 `;
 
-const NickName = styled.h2`
+const Lesson = styled.h2`
 color: ${theme.colors.accent};
 font-weight: 600;
 font-size: 18px;
@@ -34,39 +35,16 @@ font-size: 18px;
   
 `
 
-const Pagination = styled.div`
-  span {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background-color: ${theme.colors.primaryFont};
-    margin: 5px;
-    border-radius: 50%;
-    margin:20px;
-    cursor: pointer;
 
-    &:hover{
-        transform: scale(1.5);
 
-    }
-
-    &.active{
-    background-color: ${theme.colors.accent};
-    transform: scale(1.5);
-   
-  }
-  }
-
- 
-`;
 
 
 export const S ={
     Slider,
     Slide,
     Text, Name,
-    NickName,
-    Pagination,
+    Lesson,
+ 
     
 
     
