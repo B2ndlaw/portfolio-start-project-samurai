@@ -17,7 +17,6 @@ const Skills = styled.section`
 
 export const Skill = styled.div`
   flex-grow: 1;
-
 `;
 
 const FrontCard = styled.div`
@@ -26,7 +25,7 @@ const FrontCard = styled.div`
   height: 100%; */
   /* background-color: ${theme.colors.primaryBg}; */
   backface-visibility: hidden;
-  transition: transform 1s;
+  transition: ${theme.animations.transition}; 
   //new
   background-image: linear-gradient(
     0.25turn,
@@ -52,12 +51,12 @@ const BackCard = styled.div`
   left: 0;
   top: 0;
 
-  transition: 1s;
+  transition: ${theme.animations.transition};
   backface-visibility: hidden;
   /* background-color: ${theme.colors.secondaryBg}; */
-  background: url(http://www.psdee.com/content/images/article/20170828/21/01/37_201.jpg) center center no-repeat;
+  background: url(http://www.psdee.com/content/images/article/20170828/21/01/37_201.jpg)
+    center center no-repeat;
   transform: rotateY(180deg);
-  
 
   //new
 
@@ -79,8 +78,9 @@ const SkillCard = styled.div`
   margin: 0 auto 25px;
   width: 300px;
   max-height: 60vh;
-  
+
   cursor: pointer;
+  
   }
 
   &:active {
@@ -115,18 +115,26 @@ const SkillName = styled.p`
 const ImageWrapper = styled.div`
   position: relative;
   padding: 0 10px;
-  
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: ${theme.animations.transition};
+  }
 
   &:hover {
     &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
+      opacity: 1;
+    }
+    ${Button} {
+      opacity: 1;
     }
   }
 
@@ -136,12 +144,12 @@ const ImageWrapper = styled.div`
     top: 50%;
     transform: translate(-50%);
     display: none;
+    transition: ${theme.animations.transition};
   }
 `;
 
 const Image = styled.img`
   width: 100%;
-
 `;
 
 const Text = styled.p`

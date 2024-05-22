@@ -12,6 +12,7 @@ export const KatanaSound = () => {
    <div onMouseEnter={() => play()} onMouseLeave={() => stop()}>
     
     </div>
+
     
   );
 };

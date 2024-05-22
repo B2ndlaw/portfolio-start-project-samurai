@@ -9,7 +9,7 @@ import { S } from "./Sensei_Styles";
 
 export const Sensei: React.FC = () => {
   return (
-    <S.Sensei>
+    <S.Sensei id="sensei">
       <Container>
       
         <SectionTitle>

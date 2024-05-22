@@ -9,13 +9,14 @@ import { Contact } from './layout/sections/contact/Contact';
 
 import { Footer } from './layout/footer/Footer';
 import { Skills } from './layout/sections/skills/Skills';
+import { GoTopBtn } from './components/goTopBtn/GoTopBtn';
 
 
 
 function App() {
     return (
         <div className="App">
-            
+            <GoTopBtn/>
             <Header />
             <Main />
            <Skills/>

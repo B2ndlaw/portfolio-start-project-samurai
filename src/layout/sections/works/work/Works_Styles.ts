@@ -11,7 +11,7 @@ const Works = styled.section`
 
 `;
 
-//Works
+//Work
 const Work = styled.div`
   background-color: ${theme.colors.secondaryBg};
   width: 330px;
@@ -41,7 +41,9 @@ const ImageWrapper = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%);
+    transition: ${theme.animations.transition};
   }
+
   &::before {
       content: "";
       position: absolute;
@@ -50,8 +52,9 @@ const ImageWrapper = styled.div`
       top: 0;
       bottom: 0;
       background: rgba(0, 0, 0, 0.3);
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(2px);
       opacity: 0;
+      transition: ${theme.animations.transition}; 
     }
   &:hover {
 

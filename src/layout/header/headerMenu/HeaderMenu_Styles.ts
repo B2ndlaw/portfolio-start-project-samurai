@@ -1,14 +1,11 @@
 import styled, { css } from "styled-components";
 import { theme } from "../../../styles/Theme";
+import { Link } from "react-scroll";
 
 //Menu
-const Link = styled.a`
-  //font-family: "Poppins", sans-serif;
-  font-size: 23px;
-  font-weight: 400;
-  text-align: center;
 
-  color: transparent;
+const MenuItem = styled.li`
+  position: relative;
 `;
 
 const Mask = styled.span`
@@ -18,6 +15,7 @@ const Mask = styled.span`
   display: inline-block;
   height: 50%;
   overflow-y: hidden;
+  transition: ${theme.animations.transition}; 
   //outline: 1px solid red;
   color: ${theme.colors.primaryFont};
   & + & {
@@ -27,9 +25,16 @@ const Mask = styled.span`
       transform: translateY(-50%);
     }
   }
+
 `;
-const MenuItem = styled.li`
-  position: relative;
+
+const NavLink = styled(Link)`
+  //font-family: "Poppins", sans-serif;
+  font-size: 23px;
+  font-weight: 400;
+  text-align: center;
+  cursor: pointer;
+  color: transparent;
 
   &::before {
     content: "";
@@ -42,9 +47,14 @@ const MenuItem = styled.li`
     right: -10px;
     z-index: 1;
     transform: scale(0);
+    transition: ${theme.animations.transition}; 
   }
 
   &:hover {
+    opacity: 0.6;
+  }
+
+  &.active {
     &::before {
       transform: scale(1);
     }
@@ -59,13 +69,14 @@ const MenuItem = styled.li`
     }
   }
 `;
+
 // MobileMenu
 
 const MobileMenu = styled.nav``;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  background-color: ${theme.colors.primaryBg};
+  background-color: ${theme.colors.secondaryBg};
   top: 0;
   right: 0;
   bottom: 0;
@@ -121,7 +132,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
       position: absolute;
       transform: translateY(-10px);
       left: 0px;
-    
+
       ${(props) =>
         props.isOpen &&
         css<{ isOpen: boolean }>`
@@ -158,7 +169,7 @@ const DesktopMenu = styled.nav`
 `;
 
 export const S = {
-  Link,
+  NavLink,
   MenuItem,
   Mask,
   MobileMenu,
