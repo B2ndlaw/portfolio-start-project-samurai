@@ -69,17 +69,19 @@ const BackCard = styled.div`
 `;
 
 const SkillCard = styled.div`
-  //new
+ 
   position: relative;
-
   background: transparent;
   perspective: 1000px;
-  //new
-  margin: 0 auto 25px;
+  margin: 0 auto;
   width: 300px;
   max-height: 60vh;
 
   cursor: pointer;
+
+  @media ${theme.media.tablet} {
+    margin: 0 auto 70px;
+  }
   
   }
 

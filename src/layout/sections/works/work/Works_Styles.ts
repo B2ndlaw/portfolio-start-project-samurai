@@ -3,6 +3,7 @@ import { FlexWrapper } from "../../../../components/FlexWrapper";
 import { Button } from "../../../../components/Button";
 import { theme } from "../../../../styles/Theme";
 import { Link } from "../../../../components/Link";
+import { motion } from "framer-motion";
 
 //Works
 const Works = styled.section`
@@ -14,8 +15,7 @@ const Works = styled.section`
 //Work
 const Work = styled.div`
   background-color: ${theme.colors.secondaryBg};
-  width: 330px;
-  flex-grow: 1;
+  
  
   
 
@@ -26,9 +26,9 @@ const Work = styled.div`
     }
   }
 
-  @media ${theme.media.desktop} {
+  /* @media ${theme.media.desktop} {
     max-width: 540px;
-  }
+  } */
 `;
 const ImageWrapper = styled.div`
   position: relative;

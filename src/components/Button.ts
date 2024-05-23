@@ -39,6 +39,7 @@ export const Button = styled.button`
     bottom: 0;
     transform: translateX(-50%);
     z-index: -1;
+    transition: ${theme.animations.transition};
     
     
 

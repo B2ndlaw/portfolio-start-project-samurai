@@ -7,6 +7,7 @@ import { Container } from "../../../components/Container";
 import { S } from "./Sensei_Styles";
 
 
+
 export const Sensei: React.FC = () => {
   return (
     <S.Sensei id="sensei">
@@ -19,6 +20,7 @@ export const Sensei: React.FC = () => {
         </SectionTitle>
         
         <FlexWrapper direction="column" align="center">
+        
          
           <Slider />
         </FlexWrapper>

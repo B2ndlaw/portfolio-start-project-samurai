@@ -76,29 +76,41 @@ const MobileMenu = styled.nav``;
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   position: fixed;
-  background-color: ${theme.colors.secondaryBg};
+  background-color: rgba(0,0,0,0.8);
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 99999;
-  display: none;
+
+
+  display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translateY(-100%);
+      transition: .8s ease-in-out;
+
+ 
+
+  ul {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    transition: .8s ease-in-out;
+  }
 
   ${(props) =>
     props.isOpen &&
     css<{ isOpen: boolean }>`
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    `}
+    transform: translateY(0);
 
-  ul {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-  }
+
+    & ul {
+      gap: 40px;
+    }
+    `}
 `;
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
